@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理员账户</title>
+</head>
+<body>
+    <h1>账户列表：</h1>
+    <table border="1">
+        <thead>
+            <th>用户名</th>
+            <th>密码</th>
+        </thead>
+        <tbody>
+            {% for line in data %}
+            <tr>
+                <td>{{ line.user }}</td>
+                <td>{{ line.pwd }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
